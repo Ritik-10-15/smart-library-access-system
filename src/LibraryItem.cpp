@@ -2,7 +2,7 @@
 #include<sstream>
 using namespace std;
 //convert enum to string for display
-string itemTypeTostring(ItemType t){
+string itemTypeToString(ItemType t){
     switch(t){
         case ItemType::Book: return "Book";
         case ItemType::Laptop: return "Laptop";
@@ -34,7 +34,7 @@ void LibraryItem::markReturned(){
 //default info output(can be overridden)
 string LibraryItem::info() const{
     ostringstream oss;
-    oss<<"["<<itemTypeTostring(type())<<"]"
+    oss<<"["<<itemTypeToString(type())<<"]"
     <<"ID="<<itemId<<"|"
     <<title<<"|"
     <<(available?"Available":"Borrowed");
